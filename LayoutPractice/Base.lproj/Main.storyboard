@@ -85,7 +85,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="132.06521739130434"/>
+            <point key="canvasLocation" x="286" y="134"/>
         </scene>
         <!--LeagueVC-->
         <scene sceneID="1e1-cn-KXE">
@@ -164,7 +164,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="XVg-2O-gKN" kind="show" id="G5E-l9-Jh4"/>
+                                    <action selector="onNextTapped:" destination="Le2-hv-Zzn" eventType="touchUpInside" id="sR9-KK-6w5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4g-gy-POn">
@@ -200,11 +200,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eAK-IH-YhE"/>
                     </view>
+                    <connections>
+                        <segue destination="XVg-2O-gKN" kind="show" identifier="skillVCSegue" id="eQR-Fk-pS7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a3y-1M-gg0" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="MaP-JB-sYp" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="992.79999999999995" y="131.78410794602701"/>
+            <point key="canvasLocation" x="985" y="134"/>
         </scene>
         <!--SkillVC-->
         <scene sceneID="ajG-c8-ITh">
@@ -308,7 +311,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QBr-Qk-Uqh" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="XN5-K0-QaI" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1956" y="133.5832083958021"/>
+            <point key="canvasLocation" x="1684" y="134"/>
         </scene>
     </scenes>
     <resources>
