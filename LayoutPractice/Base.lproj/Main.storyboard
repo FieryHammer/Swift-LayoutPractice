@@ -128,6 +128,9 @@
                                         <state key="normal" title="Mens">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onMensTapped:" destination="Le2-hv-Zzn" eventType="touchUpInside" id="Cfh-Gl-0TY"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hmz-vm-rd9" customClass="BorderButton" customModule="LayoutPractice" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="75" width="335" height="50"/>
@@ -139,6 +142,9 @@
                                         <state key="normal" title="Womens">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onWomensTapped:" destination="Le2-hv-Zzn" eventType="touchUpInside" id="Oo9-cT-i7J"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DlJ-Ts-LV8" customClass="BorderButton" customModule="LayoutPractice" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="150" width="335" height="50"/>
@@ -150,10 +156,13 @@
                                         <state key="normal" title="Co-ed">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onCoedTapped:" destination="Le2-hv-Zzn" eventType="touchUpInside" id="rEe-WI-CsL"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pVz-wE-ePK" customClass="BorderButton" customModule="LayoutPractice" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pVz-wE-ePK" customClass="BorderButton" customModule="LayoutPractice" customModuleProvider="target">
                                 <rect key="frame" x="20" y="577" width="335" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.39597602739999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -201,6 +210,7 @@
                         <viewLayoutGuide key="safeArea" id="eAK-IH-YhE"/>
                     </view>
                     <connections>
+                        <outlet property="nextButton" destination="pVz-wE-ePK" id="vKQ-LQ-RWL"/>
                         <segue destination="XVg-2O-gKN" kind="show" identifier="skillVCSegue" id="eQR-Fk-pS7"/>
                     </connections>
                 </viewController>
@@ -220,17 +230,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beginnerBallerBG" translatesAutoresizingMaskIntoConstraints="NO" id="fL3-Mq-zTF">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Qj-hy-AgV">
-                                <rect key="frame" x="10" y="30" width="44" height="33"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="44" id="HKv-SO-ZWk"/>
-                                    <constraint firstAttribute="height" constant="33" id="oJb-3i-WAy"/>
-                                </constraints>
-                                <state key="normal" image="backButton"/>
-                                <connections>
-                                    <segue destination="XN5-K0-QaI" kind="unwind" unwindAction="unwindFromSkillVCWithUnwindSegue:" id="fSy-v5-48Q"/>
-                                </connections>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="0wG-ab-jcL">
                                 <rect key="frame" x="20" y="176" width="335" height="50"/>
                                 <subviews>
@@ -297,11 +296,9 @@
                             <constraint firstItem="MOe-Uy-hLq" firstAttribute="centerX" secondItem="1JD-8z-P6V" secondAttribute="centerX" id="MnF-DS-TlA"/>
                             <constraint firstItem="fL3-Mq-zTF" firstAttribute="trailing" secondItem="z0M-AN-OWh" secondAttribute="trailing" id="Nbo-Mu-CwA"/>
                             <constraint firstItem="fL3-Mq-zTF" firstAttribute="top" secondItem="1JD-8z-P6V" secondAttribute="top" id="VIu-RJ-5zw"/>
-                            <constraint firstItem="0Qj-hy-AgV" firstAttribute="top" secondItem="z0M-AN-OWh" secondAttribute="top" constant="10" id="W3e-6J-aI7"/>
                             <constraint firstItem="z0M-AN-OWh" firstAttribute="trailing" secondItem="0wG-ab-jcL" secondAttribute="trailing" constant="20" id="b7q-NT-wdR"/>
                             <constraint firstItem="MOe-Uy-hLq" firstAttribute="top" secondItem="z0M-AN-OWh" secondAttribute="top" constant="20" id="ggf-5E-Ouo"/>
                             <constraint firstItem="z0M-AN-OWh" firstAttribute="trailing" secondItem="d62-An-jwi" secondAttribute="trailing" constant="20" id="hzX-tj-dAP"/>
-                            <constraint firstItem="0Qj-hy-AgV" firstAttribute="leading" secondItem="z0M-AN-OWh" secondAttribute="leading" constant="10" id="lhE-2e-eU3"/>
                             <constraint firstItem="0wG-ab-jcL" firstAttribute="top" secondItem="MOe-Uy-hLq" secondAttribute="bottom" constant="40" id="nTJ-nS-obh"/>
                             <constraint firstItem="d62-An-jwi" firstAttribute="leading" secondItem="z0M-AN-OWh" secondAttribute="leading" constant="20" id="vTb-11-aSJ"/>
                         </constraints>
@@ -309,7 +306,6 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QBr-Qk-Uqh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="XN5-K0-QaI" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1684" y="134"/>
         </scene>
